@@ -1,0 +1,17 @@
+[project]
+name = "matlab-mcp"
+version = "0.2.0"
+description = "MCP server that lets ZCode control MATLAB via matlab.engine"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mcp>=1.2.0,<2",
+    "numpy>=1.26",
+    "matlabengine==25.2.*",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

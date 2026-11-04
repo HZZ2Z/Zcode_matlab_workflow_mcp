@@ -1,0 +1,11 @@
+# python
+.venv/
+.pytest_cache/
+__pycache__/
+*.egg-info/
+
+# 测试用课件 PDF（含版权内容，不入库）
+测试可用课件/
+
+# 运行产物
+*.mat

@@ -1,0 +1,17 @@
+{
+  "name": "matlab-mcp",
+  "version": "0.2.0",
+  "description": "Persistent MATLAB/Simulink session for ZCode: run code and scripts through a FIFO job queue safe for concurrent agents, read/write structured workspace variables, export figures as PNG, gate scripts with checkcode linting, and stream live Simulink signal snapshots.",
+  "description_i18n": {
+    "zh-CN": "ZCode 的常驻 MATLAB/Simulink 会话：代码与脚本经 FIFO 作业队列执行（多 agent 并发安全）、结构化工作区变量读写、图表导出 PNG、checkcode 脚本门禁、Simulink 信号实时快照。"
+  },
+  "mcpServers": {
+    "matlab": {
+      "type": "stdio",
+      "command": "${ZCODE_PLUGIN_ROOT}/.venv/Scripts/python.exe",
+      "args": ["-m", "matlab_mcp"],
+      "env": { "MATLAB_MCP_WORKDIR": "${ZCODE_PROJECT_DIR}" }
+    }
+  },
+  "skills": "./skills"
+}

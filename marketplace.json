@@ -1,0 +1,17 @@
+{
+  "name": "dev-matlab-mcp-local",
+  "plugins": [
+    {
+      "name": "matlab-mcp",
+      "source": "./",
+      "version": "0.2.0",
+      "description": "Persistent MATLAB/Simulink session for ZCode: job queue, structured variables, figure export, checkcode gate, live Simulink snapshots.",
+      "displayName": "MATLAB MCP",
+      "displayName_i18n": { "zh-CN": "MATLAB MCP" },
+      "description_i18n": {
+        "zh-CN": "ZCode 的常驻 MATLAB/Simulink 会话：作业队列、结构化变量、图表导出、checkcode 门禁、Simulink 实时快照。"
+      },
+      "category": "developer-tools"
+    }
+  ]
+}
