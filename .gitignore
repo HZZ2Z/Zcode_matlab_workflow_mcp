@@ -9,3 +9,6 @@ __pycache__/
 
 # 运行产物
 *.mat
+
+# ZCode 会话内部文件
+.zcode/

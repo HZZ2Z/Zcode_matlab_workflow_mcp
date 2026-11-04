@@ -2,6 +2,8 @@
 name = "matlab-mcp"
 version = "0.2.0"
 description = "MCP server that lets ZCode control MATLAB via matlab.engine"
+license = {text = "MIT"}
+authors = [{name = "HZZ2Z"}]
 requires-python = ">=3.10,<3.13"
 dependencies = [
     "mcp>=1.2.0,<2",

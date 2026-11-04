@@ -7,7 +7,8 @@
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2025b-orange?logo=mathworks&logoColor=white)](https://www.mathworks.com)
 [![Python](https://img.shields.io/badge/Python-3.10–3.12-blue?logo=python&logoColor=white)](https://www.python.org)
 [![ZCode Plugin](https://img.shields.io/badge/ZCode-MCP_Plugin-7c3aed)](https://github.com/HZZ2Z/Zcode_matlab_workflow_mcp)
-[![Version](https://img.shields.io/badge/version-0.2.0-green)]()
+[![Version](https://img.shields.io/badge/version-0.2.0-green)](https://github.com/HZZ2Z/Zcode_matlab_workflow_mcp)
+[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 一个仓库，两件东西：
 
@@ -27,6 +28,8 @@
 | MATLAB | **R2025b** | `matlabengine` 包版本必须与 MATLAB 版本一致（25.2.*） |
 | Python | 3.10 – 3.12 | `pyproject.toml` 限定 |
 | ZCode | 任意近期版本 | 支持 MCP 插件 + 动态工作流 |
+
+> 已在 **Windows** + MATLAB R2025b 验证。插件入口写的是 Windows 写法 `.venv/Scripts/python.exe`，Linux/macOS 用户请把 `.zcode-plugin/plugin.json` 里的命令改为 `.venv/bin/python`。
 
 ### 1. 以 ZCode 插件安装
 
@@ -56,7 +59,7 @@ python -m venv .venv
 
 ### 3. 冒烟测试（可选）
 
-会启动真实 MATLAB 会话，约 1 分钟：
+需先装 pytest（`.venv/Scripts/python -m pip install pytest`），会启动真实 MATLAB 会话，约 1 分钟：
 
 ```bash
 .venv/Scripts/python -m pytest tests/test_smoke.py -v
@@ -151,3 +154,7 @@ Zcode_matlab_workflow_mcp/
 ```
 
 执行通道走 `mcp__matlab__` 插件工具（常驻会话 + FIFO 作业队列，多 agent 并发安全）；产物默认存桌面 `matlab-sim` 目录。任意 MATLAB 代码都可经此执行——只在你信任的 MATLAB 环境和提示下使用。
+
+## License
+
+[MIT](LICENSE) © HZZ2Z

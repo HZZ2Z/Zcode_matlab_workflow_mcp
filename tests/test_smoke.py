@@ -1,6 +1,6 @@
 """Smoke tests against the real local MATLAB (R2025b). Slow: starts a real engine.
 
-Run: .venv/Scripts/python -m pytest tests/test_smoke.py -v
+Run: python -m pytest tests/test_smoke.py -v   (use the project venv's python)
 """
 import numpy as np
 import pytest
